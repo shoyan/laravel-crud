@@ -21,7 +21,7 @@ class RecipeController extends Controller
         if ($request->filled('category')) {
             $recipe = $recipe->where('category', $request->input('category'));
         }
-        $recipes = $recipe->get();
+        $recipes = $recipe->simplePaginate(1);
         return view('recipe/index', ['recipes' => $recipes, 'request' => $request]);
     }
 

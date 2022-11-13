@@ -1,0 +1,10 @@
+ul {
+    list-style: none;
+}
+.pagination {
+    display: flex;
+}
+
+.pagination li {
+    padding: 10px;
+}
